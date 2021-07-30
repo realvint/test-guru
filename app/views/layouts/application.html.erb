@@ -11,6 +11,11 @@
   </head>
 
   <body>
+    <%  if notice.present? %>
+      <%=notice %>
+    <%  elsif alert.present? %>
+      <%=alert %>
+    <% end %>
     <%= yield %>
   </body>
 </html>
