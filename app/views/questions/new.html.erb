@@ -1,0 +1,9 @@
+<h1>Новый вопрос</h1>
+
+<%= form_with model: [@test, @question] do |f|%>
+
+  <%= f.label :title %>
+  <%=  f.text_field :title %>
+
+  <%= f.submit  %>
+<% end %>
