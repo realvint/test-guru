@@ -2,7 +2,6 @@ class TestsController < ApplicationController
   before_action :set_tests!, only: %i[index show]
   before_action :set_test!, only: %i[show edit update destroy]
 
-
   rescue_from ActiveRecord::RecordNotFound, with: :rescue_with_test_not_found
 
   def index; end
