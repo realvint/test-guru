@@ -1,0 +1,25 @@
+<h1>Страница теста</h1>
+
+<p><%= link_to 'На главную', tests_path %></p>
+
+<h2><%= @test.title %></h2>
+
+<hr>
+
+<h3>Вопросы</h3>
+
+<p><%= link_to 'Создать вопрос', new_test_question_path(@test) %></p>
+
+<% if @questions.present? %>
+  <ul>
+    <% @questions.each do |question| %>
+      <%= link_to test_question_path(@test, question) do %>
+        <li>
+          <span><%= question.title %></span>
+        </li>
+      <% end %>
+    <% end %>
+  </ul>
+<% else %>
+  <p>Вопросов нет</p>
+<% end %>

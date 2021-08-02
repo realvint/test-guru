@@ -1,0 +1,14 @@
+<h1>Все тесты</h1>
+
+<p><%= link_to 'Создать тест', new_test_path %></p>
+
+<% @tests.each do |test| %>
+  <%= link_to test do %>
+    <div>
+      <span><%= test.title %></span>
+      <span>Уровень (<%= test.level %>)</span>
+      <span>(Количество вопросов - <%= test.questions.count %>)</span>
+    </div>
+  <% end %>
+<% end %>
+
