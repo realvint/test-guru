@@ -1,5 +1,14 @@
 <h1><%= question_header(@question) %></h1>
 
+<% if @question.errors.any? %>
+  <h2>Количество ошибок: [<%=  @question.errors.count %>] Вопрос не может быть сохранён:</h2>
+  <ul>
+    <% @question.errors.each do |error| %>
+      <li><%= error.full_message %></li>
+    <% end %>
+  </ul>
+<% end %>
+
 <%= form_with model: [@test, @question] do |f|%>
 
   <%= f.label :title %>
