@@ -1,6 +1,6 @@
 class TestsController < ApplicationController
-  before_action :set_tests!, only: %i[index show]
-  before_action :set_test!, only: %i[show edit update destroy]
+  before_action :set_tests, only: %i[index show]
+  before_action :set_test, only: %i[show edit update destroy]
 
   rescue_from ActiveRecord::RecordNotFound, with: :rescue_with_test_not_found
 
@@ -15,8 +15,9 @@ class TestsController < ApplicationController
   end
 
   def create
-    @test = Test.new(test_params)
-    @test.author = User.first
+    @test = author.created_tests.build(test_params)
+    # @test = Test.new(test_params)
+    # @test.author = User.first
     if @test.save
       redirect_to @test, notice: 'Тест создан'
     else
@@ -44,11 +45,11 @@ class TestsController < ApplicationController
     params.require(:test).permit(:title, :level, :category_id)
   end
 
-  def set_test!
+  def set_test
     @test = Test.find params[:id]
   end
 
-  def set_tests!
+  def set_tests
     @tests = Test.all
   end
 
