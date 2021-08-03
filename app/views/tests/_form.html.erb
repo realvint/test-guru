@@ -1,1 +1,17 @@
-<h3>Форма теста</h3>
+<h1><%= test_header(@test) %></h1>
+
+<%= render 'shared/errors', resource: @test %>
+
+<%= form_with model: @test do |f|%>
+
+  <%= f.label :title %>
+  <%=  f.text_field :title %>
+
+  <%= f.label :level %>
+  <%= f.number_field :level %>
+
+  <%= f.label :category_id %>:
+  <%= f.collection_select :category_id, Category.all, :id, :title, prompt: true %>
+
+  <%= f.submit  %>
+<% end %>

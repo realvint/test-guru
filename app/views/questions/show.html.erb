@@ -4,5 +4,5 @@
 
 <%= @question.title %>
 
-<%= link_to 'редактировать', edit_test_question_path(@test, @question) %>
-<%= link_to 'удалить', test_question_path(@test, @question), method: :delete, data: {confirm: 'Удалить вопрос?'} %>
+<%= link_to 'редактировать', edit_question_path(@question) %>
+<%= link_to 'удалить', question_path(@question), method: :delete, data: {confirm: 'Удалить вопрос?'} %>

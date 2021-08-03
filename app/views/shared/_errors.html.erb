@@ -1,0 +1,9 @@
+<% if resource.errors.any? %>
+  <h2>Количество ошибок: [<%=  resource.errors.count %>] Вопрос не может быть сохранён:</h2>
+  <ul>
+    <% resource.errors.each do |error| %>
+      <li><%= error.full_message %></li>
+    <% end %>
+  </ul>
+<% end %>
+

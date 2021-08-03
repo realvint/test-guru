@@ -2,17 +2,17 @@
 
 <p><%= link_to 'Создать тест', new_test_path %></p>
 <table border="1">
-  <tr>
-    <th>Название</th>
-    <th>Уровень</th>
-    <th>Кол-во вопросов</th>
-  </tr>
-  <% @tests.each do |test| %>
-      <tr>
-        <td><%= link_to test do %><%= test.title %><% end %></td>
-        <td align="center"><%= test.level %></td>
-        <td align="center"><%= test.questions.count %></td>
-      </tr>
-  <% end %>
+  <thead>
+    <tr>
+      <th>Название</th>
+      <th>Уровень</th>
+      <th>Кол-во вопросов</th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+ <tbody>
+  <%= render @tests %>
+ </tbody>
 </table>
 
