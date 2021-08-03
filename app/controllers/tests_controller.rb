@@ -15,9 +15,8 @@ class TestsController < ApplicationController
   end
 
   def create
-    @test = author.created_tests.build(test_params)
-    # @test = Test.new(test_params)
-    # @test.author = User.first
+    @test = Test.new(test_params)
+    @test.author = User.first
     if @test.save
       redirect_to @test, notice: 'Тест создан'
     else
