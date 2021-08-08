@@ -1,0 +1,17 @@
+<h1>Страница теста: <%= @test.title %></h1>
+
+<p><%= link_to 'На главную', tests_path %></p>
+
+<hr>
+
+<h3>Вопросы</h3>
+
+<p><%= link_to 'Создать вопрос', new_test_question_path(@test) %></p>
+
+<ul>
+  <%= render @questions %>
+</ul>
+
+<% if @questions.empty?  %>
+  <p>Вопросов нет</p>
+<% end %>

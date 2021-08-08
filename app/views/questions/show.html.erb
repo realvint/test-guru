@@ -1,0 +1,8 @@
+<h1>Страница вопроса</h1>
+
+<p><%= link_to 'Назад', test_path(@test) %></p>
+
+<%= @question.title %>
+
+<%= link_to 'редактировать', edit_question_path(@question) %>
+<%= link_to 'удалить', question_path(@question), method: :delete, data: {confirm: 'Удалить вопрос?'} %>
