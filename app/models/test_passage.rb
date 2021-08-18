@@ -5,12 +5,14 @@ class TestPassage < ApplicationRecord
 
   before_validation :before_validation_set_current_question, on: :create
 
+  SUCCESS_RATIO = 85
+
   def completed?
     current_question.nil?
   end
 
   def success?
-    passed_percents >= 85
+    passed_percents >= SUCCESS_RATIO
   end
 
   def accept!(answer_ids)
