@@ -1,0 +1,11 @@
+<h1>Тест <%= @test_passage.test.title %> завешён!</h1>
+
+<b>Ваш счёт:</b>
+<% if @test_passage.success? %>
+  <h2 class="green"><%= @test_passage.passed_percents %>%</h2><br>
+  <h2>Тест успешно пройден!</h2>
+<% else %>
+  <h2 class="red"><%= @test_passage.passed_percents %>%</h2><br>
+  <h2>Тест не пройден(</h2>
+<% end %>
+<%= link_to 'На главную', tests_path %>
