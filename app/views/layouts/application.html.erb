@@ -11,11 +11,7 @@
   </head>
 
   <body>
-    <%  if notice.present? %>
-      <%=notice %>
-    <%  elsif alert.present? %>
-      <%= flash_message(:alert) %>
-    <% end %>
+    <%= render 'shared/flash' %>
     <%= render 'shared/header' %>
     <%= yield %>
     <%= render '/shared/footer' %>

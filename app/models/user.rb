@@ -1,6 +1,13 @@
-require 'digest/sha1'
-
 class User < ApplicationRecord
+
+  devise :database_authenticatable,
+         :registerable,
+         :recoverable,
+         :rememberable,
+         :trackable,
+         :validatable,
+         :confirmable
+
 
   has_many :test_passages, dependent: :destroy
   has_many :tests, through: :test_passages
@@ -8,8 +15,6 @@ class User < ApplicationRecord
 
   validates :name, presence: true
   validates :email, presence: true, format: { with: URI::MailTo::EMAIL_REGEXP }, uniqueness: true
-
-  has_secure_password
 
   def find_user_tests_by_level(level)
     tests.where(level: level)
