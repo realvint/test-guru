@@ -9,7 +9,7 @@ class SessionsController < ApplicationController
 
     if user&.authenticate(params[:password])
       session[:user_id] = user.id
-      redirect_to cookies[:current_url] || tests_path
+      redirect_to cookies.delete(:current_url) || tests_path
     else
       flash.now[:alert] = 'Неправильный логин или пароль'
       render :new
@@ -17,8 +17,7 @@ class SessionsController < ApplicationController
   end
 
   def destroy
-    session[:user_id] = nil
-    cookies[:current_url] = nil
+    reset_session
     redirect_to root_path
   end
 
