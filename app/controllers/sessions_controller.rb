@@ -11,7 +11,7 @@ class SessionsController < ApplicationController
       session[:user_id] = user.id
       redirect_to cookies[:current_url] || tests_path
     else
-      flash[:alert] = 'Неправильный логин или пароль'
+      flash.now[:alert] = 'Неправильный логин или пароль'
       render :new
     end
   end
