@@ -1,0 +1,9 @@
+<h1><%= link_to 'Система тестов', root_path %></h1>
+<% if logged_in? %>
+  <h3>Приветствую тебя, <b><%= current_user.name %></b>!</h3>
+  <%= link_to 'Тесты', tests_path %>
+  <%= link_to 'Выход', logout_path, method: :delete, data: { confirm: 'Вы хотите выйти из системы?'} %>
+<% else %>
+  <%= link_to 'Вход', login_path %>
+  <%= link_to 'Регистрация', signup_path %>
+<% end %>

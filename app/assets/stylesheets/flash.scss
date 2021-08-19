@@ -1,0 +1,15 @@
+.flash {
+  border: 2px solid;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.flash.alert {
+  background-color: #f8d7da;
+  color: white;
+}
+
+.flash.info {
+  background-color: #d1ecf1;
+  color: white;
+}
