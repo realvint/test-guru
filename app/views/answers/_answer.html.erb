@@ -1,5 +1,0 @@
-<li>
-  <%= link_to answer do %><%= answer.title %><% end %>
-  <%= link_to 'редактировать', edit_answer_path(answer) %>
-  <%= link_to 'удалить', answer_path(answer), method: :delete, data: {confirm: 'Удалить ответ?'} %>
-</li>

@@ -1,0 +1,5 @@
+<li>
+  <%= link_to admin_answer_path(answer) do %><%= answer.title %><% end %>
+  <%= link_to 'редактировать', edit_admin_answer_path(answer) %>
+  <%= link_to 'удалить', admin_answer_path(answer), method: :delete, data: {confirm: 'Удалить ответ?'} %>
+</li>

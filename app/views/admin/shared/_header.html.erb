@@ -1,0 +1,8 @@
+
+<h2>Панель управления системой тестирования</h2>
+
+<h3>Администратор <%= current_user.email %></h3>
+
+<%= link_to 'Главная', tests_path %>
+<%= link_to 'Выйти', destroy_user_session_path, method: :delete %>
+

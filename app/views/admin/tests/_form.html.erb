@@ -2,7 +2,7 @@
 
 <%= render 'shared/errors', resource: @test %>
 
-<%= form_with model: @test do |f|%>
+<%= form_with model: [:admin, @test], local: true do |f|%>
 
   <%= f.label :title %>
   <%=  f.text_field :title %>

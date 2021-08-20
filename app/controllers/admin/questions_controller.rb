@@ -1,4 +1,5 @@
-class QuestionsController < ApplicationController
+class Admin::QuestionsController < Admin::BaseController
+
   before_action :set_test, only: %i[new create]
   before_action :set_question, only: %i[show destroy edit update]
 
@@ -15,7 +16,7 @@ class QuestionsController < ApplicationController
   def create
     @question = @test.questions.build question_params
     if @question.save
-      redirect_to @question, notice: 'Вопрос был создан'
+      redirect_to [:admin, @question], notice: 'Вопрос был создан'
     else
       render 'new'
     end
@@ -25,7 +26,7 @@ class QuestionsController < ApplicationController
 
   def update
     if @question.update question_params
-      redirect_to @question, notice: 'Вопрос был изменён'
+      redirect_to [:admin, @question], notice: 'Вопрос был изменён'
     else
       render :edit
     end
@@ -33,7 +34,7 @@ class QuestionsController < ApplicationController
 
   def destroy
     @question.destroy
-    redirect_to test_path(@question.test), notice: 'Вопрос был удалён'
+    redirect_to admin_test_path(@question.test), notice: 'Вопрос был удалён'
   end
 
   private
