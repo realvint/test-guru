@@ -1,11 +1,11 @@
-<h1>Тест <%= @test_passage.test.title %> завешён!</h1>
+<h1><%= t('.header', title: @test_passage.test.title) %></h1>
 
-<b>Ваш счёт:</b>
+<b><%= t('.scope') %></b>
 <% if @test_passage.success? %>
   <h2 class="green"><%= @test_passage.passed_percents %>%</h2><br>
-  <h2>Тест успешно пройден!</h2>
+  <h2><%= t('.success') %></h2>
 <% else %>
   <h2 class="red"><%= @test_passage.passed_percents %>%</h2><br>
-  <h2>Тест не пройден(</h2>
+  <h2><%= t('.unsuccess') %>(</h2>
 <% end %>
-<%= link_to 'На главную', tests_path %>
+<%= link_to t('.back'), tests_path %>

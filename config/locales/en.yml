@@ -1,33 +1,185 @@
-# Files in the config/locales directory are used for internationalization
-# and are automatically loaded by Rails. If you want to use locales other
-# than English, add the necessary files in this directory.
-#
-# To use the locales, use `I18n.t`:
-#
-#     I18n.t 'hello'
-#
-# In views, this is aliased to just `t`:
-#
-#     <%= t('hello') %>
-#
-# To use a different locale, set it with `I18n.locale`:
-#
-#     I18n.locale = :es
-#
-# This would use the information in config/locales/es.yml.
-#
-# The following keys must be escaped otherwise they will not be retrieved by
-# the default I18n backend:
-#
-# true, false, on, off, yes, no
-#
-# Instead, surround them with single quotes.
-#
-# en:
-#   'true': 'foo'
-#
-# To learn more, please read the Rails Internationalization guide
-# available at https://guides.rubyonrails.org/i18n.html.
-
 en:
-  hello: "Hello world"
+  helpers:
+    submit:
+      test:
+        create: "Create test"
+        update: "Update test"
+    question:
+      create: "Create question"
+      update: "Update question"
+    answer:
+      create: "Create answer"
+      update: "Update answer"
+
+    label:
+      test:
+        title: "Title"
+        level: "Level"
+        category_id: "Category"
+      question:
+        question: "Question"
+      answer:
+        title: "Answer"
+        correct: "Correct"
+
+    select:
+      prompt: "Please select"
+
+  shared:
+    errors:
+      header:
+        one: "%{count} error detected"
+        other: "%{count} errors detected"
+    footer:
+      description: "User testing system"
+      project: "Project of school:"
+      profession: "in the training of the profession Ruby on Rails developer"
+      author: "Project author - Victor Malukhin"
+    header:
+      user: "User"
+      tests: "Tests"
+      logout: "Logout"
+      login: "Login"
+      signup: "Signup"
+      confirm: "You want to exit?"
+      main: "Tests application"
+
+  layouts:
+    admin:
+      header: "Admin Panel TestGuru"
+
+  tests:
+    header:
+      create: "Create"
+      edit: "Edit"
+    index:
+      header: "Tricky Tests"
+      title: "Title"
+      level: "Level"
+      questions: "Questions count"
+    test:
+      start: "Start"
+    rescue:
+      not_found: "Test not found"
+
+  questions:
+    header:
+      create: "Create"
+      edit: "Edit"
+      question_for: "tests question:"
+
+  test_passages:
+    result:
+      header: "The %{title} test was completed!"
+      test: "Test"
+      scope: "Your score"
+      success: "test successfully completed!"
+      unsuccess: "test not successfully completed"
+      back: "Main page"
+    show:
+      header: "Taking the test"
+      question: "Question"
+      next: "Next"
+
+  admin:
+    shared:
+      header:
+        header: "Test system control pane"
+        logout: "Logout"
+        main: "Main page"
+        admin: "Administrator"
+    base:
+      admin_required:
+        forbidden: "Access is denied."
+    tests:
+      create:
+        success: "Test was successfully created."
+      update:
+        success: "Test was successfully updated"
+      destroy:
+        success: "Test was successfully deleted"
+      show:
+        title: "Tests page"
+        questions: "Questions"
+        main: "Main page"
+        new_question: "Create question"
+        empty: "No questions"
+      index:
+        header: "Tricky Tests"
+        title: "Title"
+        level: "Level"
+        questions: "Questions count"
+        actions: "Actions"
+        create: "Create new test"
+      edit:
+        header: "Editing the test: %{title}"
+        back: "Back"
+      new:
+        header: "Creating new test"
+        back: "Back"
+      test:
+        edit: "Edit"
+        delete: "Delete"
+        confirm: "Are you sure?"
+      form:
+        back: "Back"
+        create: "Create new test"
+        update: "Update test"
+      rescue:
+        not_found: "Test not found"
+
+    questions:
+      new:
+        title: "Create question"
+        back: "Back"
+      create:
+        success: "Question created"
+      edit:
+        header: "Editing the question: %{title}"
+        back: "Back"
+      update:
+        success: "Question updated"
+      destroy:
+        success: "Question deleted"
+      show:
+        header: "Question page"
+        answers: "Answers"
+        new_answer: "New answer"
+        answer: "Answer"
+        back: "Back"
+        confirm: "Are you sure?"
+        edit: "Edit"
+        delete: "Delete"
+      rescue:
+        not_found: "Question not found"
+
+    answers:
+      create:
+        success: "Answer created"
+      update:
+        success: "Answer updated"
+      destroy:
+        success: "Answer deleted"
+      new:
+        create_new: "New answer"
+        back: "Back"
+      edit:
+        edit_header: "Change answer"
+        back: "Back"
+      show:
+        question: "Question"
+        answer: "Answer"
+        correct: "Correct?"
+        back: "Back"
+      answer:
+        edit: "Edit"
+        delete: "Delete"
+        confirm: "Delete question?"
+
+    sessions:
+      create:
+        welcome: "Welcome"
+
+  tests_mailer:
+    completed_test:
+      subject: "You just completed the TestGuru test!"

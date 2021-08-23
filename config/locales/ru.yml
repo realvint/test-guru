@@ -1,2 +1,186 @@
 ru:
-  test: "тест"
+  helpers:
+    submit:
+      test:
+        create: "Создать тест"
+        update: "Обновить тест"
+      question:
+        create: "Создать вопрос"
+        update: "Обновить вопрос"
+      answer:
+        create: "Создать ответ"
+        update: "Обновить ответ"
+
+    label:
+      test:
+        title: "Название"
+        level: "Уровень"
+        category_id: "Категория"
+      question:
+        question: "Вопрос"
+      answer:
+        title: "Ответ"
+        correct: "Верный"
+    select:
+      prompt: "Выберите:"
+
+  shared:
+    errors:
+      header:
+        few: "Обнаружено %{count} ошибки"
+        many: "Обнаружено %{count} ошибок"
+        one: "Обнаружена %{count} ошибка"
+        other: "Обнаружено %{count} ошибки"
+    footer:
+      description: "Система тестирования пользователей"
+      project: "Учебный проект школы"
+      profession: "в рамках обучения профессии Ruby on Rails developer"
+      author: "Автор проекта - Малухин Виктор"
+    header:
+      user: "Пользователь"
+      tests: "Тесты"
+      logout: "Выход"
+      login: "Войти"
+      signup: "Регистрация"
+      confirm: "Вы хотите выйти из системы?"
+      main: "Система тестов"
+
+  layouts:
+    admin:
+      header: "Панель управления TestGuru"
+
+  tests:
+    header:
+      create: "Создать"
+      edit: "Редактировать"
+    index:
+      header: "Доступные тесты"
+      title: "Название"
+      level: "Уровень"
+      questions: "Кол-во вопросов"
+    test:
+      start: "Начать"
+    rescue:
+      not_found: "Тест не найден"
+
+  questions:
+    header:
+      create: "Создать"
+      edit: "Редактировать"
+      question_for: "вопрос для теста:"
+
+  test_passages:
+    result:
+      header: "Тест %{title} успешно завершён!"
+      test: "Тест"
+      scope: "Ваш счёт"
+      success: "успешно пройден!"
+      unsuccess: "тест пройден не успешно"
+      back: "На главную"
+    show:
+      header: "Прохождение теста"
+      question: "Вопрос"
+      next: "Дальше"
+
+  admin:
+    shared:
+      header:
+        header: "Панель управления системой тестирования"
+        logout: "Выйти"
+        main: "Главная"
+        admin: "Администратор"
+    base:
+      admin_required:
+        forbidden: "Нет доступа."
+    tests:
+      create:
+        success: "Тест успешно создан."
+      update:
+        success: "Тест обновлен"
+      destroy:
+        success: "Тест был удален"
+      show:
+        title: "Страница теста"
+        questions: "Вопросы"
+        main: "На главную"
+        new_question: "Создать вопрос"
+        empty: "Вопросов нет"
+      index:
+        header: "Доступные тесты"
+        title: "Название"
+        level: "Уровень"
+        questions: "Кол-во вопросов"
+        actions: "Действия"
+        create: "Создать новый тест"
+      edit:
+        header: "Редактирование теста: %{title}"
+        back: "Назад"
+      new:
+        header: "Создание нового теста"
+        back: "Назад"
+      test:
+        edit: "Изменить"
+        delete: "Удалить"
+        confirm: "Вы уверены?"
+      form:
+        back: "Назад"
+        create: "Создать тест"
+        update: "Обновить тест"
+      rescue:
+        not_found: "Тест не найден"
+
+    questions:
+      new:
+        title: "Создание вопроса"
+        back: "Назад"
+      create:
+        success: "Вопрос был создан"
+      edit:
+        header: "Редактирование вопроса: %{title}"
+        back: "Назад"
+      update:
+        success: "Вопрос был обновлен"
+      destroy:
+        success: "Вопрос был удален"
+      show:
+        header: "Страница вопроса"
+        answers: "Ответы"
+        new_answer: "Новый ответ"
+        answer: "Ответ"
+        back: "Назад"
+        confirm: "Вы уверены?"
+        edit: "Редактировать"
+        delete: "Удалить"
+      rescue:
+        not_found: "Вопрос не найден"
+
+    answers:
+      create:
+        success: "Ответ создан"
+      update:
+        success: "Ответ был обновлен"
+      destroy:
+        success: "Ответ был удален"
+      new:
+        create_new: "Новый ответ"
+        back: "Назад"
+      edit:
+        edit_header: "Изменение ответа"
+        back: "Назад"
+      show:
+        question: "Вопрос"
+        answer: "Ответ"
+        correct: "Правильный?"
+        back: "Назад"
+      answer:
+        edit: "Изменить"
+        delete: "Удалить"
+        confirm: "Удалить вопрос?"
+
+  sessions:
+    create:
+      welcome: "Привет"
+
+  tests_mailer:
+    completed_test:
+      subject: "Вы завершили тест в системе TestGuru!"

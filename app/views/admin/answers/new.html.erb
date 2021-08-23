@@ -1,7 +1,7 @@
-<h1>Новый ответ</h1>
+<h1><%= t('.create_new') %></h1>
 
 <p><%= @question.title %></p>
 
 <%= render 'form'%>
 
-<%= link_to 'Назад', admin_question_path(@question) %>
+<%= link_to t('.back'), admin_question_path(@question) %>
