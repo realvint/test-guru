@@ -1,15 +1,15 @@
-<h1>Страница вопроса</h1>
+<h1><%= t('.header') %></h1>
 
-<p><%= link_to 'Назад', admin_test_path(@test) %></p>
+<p><%= link_to t('.back'), admin_test_path(@test) %></p>
 
 <p><%= @question.title %></p>
 
-<%= link_to 'редактировать', edit_admin_question_path(@question) %>
-<%= link_to 'удалить', admin_question_path(@question), method: :delete, data: {confirm: 'Удалить вопрос?'} %>
+<%= link_to t('.edit'), edit_admin_question_path(@question) %>
+<%= link_to t('.delete'), admin_question_path(@question), method: :delete, data: {confirm: t('.confirm')} %>
 
-<h2>Ответы</h2>
+<h2><%= t('.answers') %>:</h2>
 
-<%= link_to 'Создать ответ', new_admin_question_answer_path(@question) %>
+<%= link_to t('.new_answer'), new_admin_question_answer_path(@question) %>
 
 <ol>
   <%= render @question.answers %>

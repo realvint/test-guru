@@ -19,7 +19,7 @@ class Admin::TestsController < Admin::BaseController
   def create
     @test = current_user.created_tests.build(test_params)
     if @test.save
-      redirect_to admin_test_path(@test), notice: 'Тест создан'
+      redirect_to admin_test_path(@test), notice: t('.success')
     else
       render :new
     end
@@ -27,7 +27,7 @@ class Admin::TestsController < Admin::BaseController
 
   def update
     if @test.update(test_params)
-      redirect_to admin_test_path(@test), notice: 'Тест изменён'
+      redirect_to admin_test_path(@test), notice: t('.success')
     else
       render :edit
     end
@@ -35,7 +35,7 @@ class Admin::TestsController < Admin::BaseController
 
   def destroy
     @test.destroy
-    redirect_to admin_tests_path, notice: 'Тест был удалён'
+    redirect_to admin_tests_path, notice: t('.success')
   end
 
   private
@@ -49,7 +49,6 @@ class Admin::TestsController < Admin::BaseController
   end
 
   def rescue_with_test_not_found
-    render plain: 'Тест не найден'
+    render plain: t('.rescue.not_found')
   end
-
 end

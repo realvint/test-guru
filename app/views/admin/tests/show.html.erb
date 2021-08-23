@@ -1,17 +1,17 @@
-<h1>Страница теста: <%= @test.title %></h1>
+<h1><%= t('.title') %>: <%= @test.title %></h1>
 
-<p><%= link_to 'На главную', admin_tests_path %></p>
+<p><%= link_to t('.main'), admin_tests_path %></p>
 
 <hr>
 
-<h3>Вопросы</h3>
+<h3><%= t('.questions') %></h3>
 
-<p><%= link_to 'Создать вопрос', new_admin_test_question_path(@test) %></p>
+<p><%= link_to t('.new_question'), new_admin_test_question_path(@test) %></p>
 
 <ol>
   <%= render partial: 'admin/questions/question', collection: @test.questions %>
 </ol>
 
 <% if @questions.empty?  %>
-  <p>Вопросов нет</p>
+  <p><%= t('.empty') %></p>
 <% end %>

@@ -1,8 +1,14 @@
 
-<h2>Панель управления системой тестирования</h2>
+<h2><%= t('.header') %></h2>
 
-<h3>Администратор <%= current_user.email %></h3>
+<h3><%= t('.admin') %> <%= current_user.email %></h3>
 
-<%= link_to 'Главная', tests_path %>
-<%= link_to 'Выйти', destroy_user_session_path, method: :delete %>
+<%= link_to t('.main'), tests_path %>
+<%= link_to t('.logout'), destroy_user_session_path, method: :delete %>
 
+<div class="<%= "active" if I18n.locale == :ru %>">
+  <%= link_to 'Русский', { lang: :ru } %>
+</div>
+<div class="<%= "active" if I18n.locale == :en %>">
+  <%= link_to 'English ', { lang: :en } %>
+</div>

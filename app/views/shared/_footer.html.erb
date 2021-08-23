@@ -1,9 +1,9 @@
 <hr>
-<h4>Система тестирования пользователей - <%= github_url('realvint', 'test-guru') %></h4>
-<p>Учебный проект школы
+<h4><%= t('.description') %> - <%= github_url('realvint', 'test-guru') %></h4>
+<p><%= t('.project') %>
   <%= link_to 'Thinknetica', "https://www.thinknetica.com", target: '_blank' %>
-  в рамках обучения профессии <b>Ruby on Rails developer</b>
+  <%= t('.profession') %>
 </p>
-<h4>Автор проекта - Малухин Виктор</h4>
+<h4><%= t('.author') %></h4>
 <%= mail_to "victor.malukhin@gmail.com" %>
 <%= full_year %>
