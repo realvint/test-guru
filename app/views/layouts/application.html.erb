@@ -12,9 +12,27 @@
   </head>
 
   <body>
-    <%= render 'shared/flash' %>
-    <%= render 'shared/header' %>
-    <%= yield %>
-    <%= render '/shared/footer' %>
+    <div class="container">
+      <%= render 'shared/header' %>
+      <div class="row pt-5">
+        <div class="col-md-12 col-lg-12 pt-2">
+          <%  if notice.present? %>
+            <div class="alert alert-success alert-dismissible">
+              <%=notice %>
+              <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+          <%  elsif alert.present? %>
+            <div class="alert alert-danger alert-dismissible">
+              <%=alert %>
+              <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+          <% end %>
+          <div class="pt-2">
+            <%= yield %>
+          </div>
+        </div>
+      </div>
+      <%= render '/shared/footer' %>
+    </div>
   </body>
 </html>
