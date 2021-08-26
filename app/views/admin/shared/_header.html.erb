@@ -1,14 +1,19 @@
-
-<h2><%= t('.header') %></h2>
-
-<h3><%= t('.admin') %> <%= current_user.email %></h3>
-
-<%= link_to t('.main'), tests_path %>
-<%= link_to t('.logout'), destroy_user_session_path, method: :delete %>
-
-<div class="<%= "active" if I18n.locale == :ru %>">
-  <%= link_to 'Русский', { lang: :ru } %>
-</div>
-<div class="<%= "active" if I18n.locale == :en %>">
-  <%= link_to 'English ', { lang: :en } %>
-</div>
+<nav class="navbar navbar-light ">
+  <h1><%= link_to t('.header'), root_path, class: 'navbar-brand' %></h1>
+  <span class="navbar-text p-3">
+    <% if user_signed_in? %>
+      <%= t('.admin') %>: <%= current_user.email %>
+      <span class="navbar-text p-2 <%= "active" if I18n.locale == :ru %>">
+        <%= link_to 'Русский', { lang: :ru } %>
+      </span>
+      <span class="navbar-text p-2 <%= "active" if I18n.locale == :en %>">
+        <%= link_to 'English ', { lang: :en } %>
+      </span>
+      <%= link_to t('.tests'), tests_path, class: "p-3" %>
+      <%= link_to t('.logout'), destroy_user_session_path, method: :delete, data: { confirm: t('.confirm')} %>
+      <% else %>
+      <%= link_to t('.login'), new_user_session_path %>
+      <%= link_to t('.signup'), new_user_registration_path %>
+    <% end %>
+  </span>
+</nav>

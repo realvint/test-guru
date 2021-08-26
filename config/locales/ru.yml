@@ -43,7 +43,8 @@ ru:
       login: "Войти"
       signup: "Регистрация"
       confirm: "Вы хотите выйти из системы?"
-      main: "Система тестов"
+      main: "Система тестов - TestGuru"
+      admin: "Админпанель"
 
   layouts:
     admin:
@@ -87,8 +88,11 @@ ru:
       header:
         header: "Панель управления системой тестирования"
         logout: "Выйти"
-        main: "Главная"
+        tests: "Тесты"
         admin: "Администратор"
+        login: "Войти"
+        signup: "Регистрация"
+        confirm: "Вы хотите выйти из системы?"
     base:
       admin_required:
         forbidden: "Нет доступа."

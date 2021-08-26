@@ -1,12 +1,10 @@
 <%= form_with model: [:admin, @question, @answer], local: true do |form| %>
   <%= render 'shared/errors', resource: @answer %>
-
   <%= form.label :title %>
-  <%= form.text_field :title, id: :answer_title %>
-
+  <div class="input-group mb-3">
+    <%= form.text_field :title, id: :answer_title, class: 'form-control' %>
+    <%= form.submit class: 'btn btn-outline-primary'%>
+  </div>
   <%= form.label :correct %>
-  <%= form.check_box :correct, id: :answer_correct %>
-
-  <%= form.submit %>
-
+  <%= form.check_box :correct, id: :answer_correct, class: 'form-check-input' %>
 <% end %>

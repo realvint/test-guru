@@ -1,11 +1,18 @@
-<h1><%= t('.header', title: @test_passage.test.title) %></h1>
+<div class="card">
+  <div class="card-header">
+    <h1><%= t('.header', title: @test_passage.test.title) %></h1>
+  </div>
+  <div class="card-body">
+    <b><%= t('.scope') %></b>
+    <% if @test_passage.success? %>
+      <h2 class="green"><%= @test_passage.passed_percents %>%</h2><br>
+      <h2><%= t('.success') %></h2>
+    <% else %>
+      <h2 class="red"><%= @test_passage.passed_percents %>%</h2><br>
+      <h2><%= t('.unsuccess') %>(</h2>
+    <% end %>
+    <%= link_to t('.back'), tests_path %>
+  </div>
+</div>
 
-<b><%= t('.scope') %></b>
-<% if @test_passage.success? %>
-  <h2 class="green"><%= @test_passage.passed_percents %>%</h2><br>
-  <h2><%= t('.success') %></h2>
-<% else %>
-  <h2 class="red"><%= @test_passage.passed_percents %>%</h2><br>
-  <h2><%= t('.unsuccess') %>(</h2>
-<% end %>
-<%= link_to t('.back'), tests_path %>
+
