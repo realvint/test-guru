@@ -81,6 +81,14 @@ en:
       header: "Taking the test"
       question: "Question"
       next: "Next"
+    gist:
+      success: "Gist was successfully created!"
+      failure: "An error occurred while saving gist"
+      description: "A question about %{title} from TestGuru"
+      question: "Question"
+      link: "Gist URL"
+      user: "Author"
+      created_gist: "Created Gist"
 
   admin:
     shared:

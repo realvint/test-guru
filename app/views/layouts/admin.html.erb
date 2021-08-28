@@ -15,12 +15,12 @@
         <div class="col-md-12 col-lg-12 pt-2">
           <%  if notice.present? %>
             <div class="alert alert-success alert-dismissible">
-              <%=notice %>
+              <%= sanitize(notice) %>
               <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
             </div>
           <%  elsif alert.present? %>
             <div class="alert alert-danger alert-dismissible">
-              <%=alert %>
+              <%= sanitize(alert) %>
               <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
             </div>
           <% end %>
