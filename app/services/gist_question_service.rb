@@ -2,6 +2,12 @@ class GistQuestionService
 
   STATUS_SUCCESS = 201
 
+  Result = Struct.new(:url, :status_code) do
+    def success?
+      status_code == STATUS_SUCCESS
+    end
+  end
+
   def initialize(question, client: nil)
     @question = question
     @test = @question.test
@@ -10,21 +16,14 @@ class GistQuestionService
 
   def call
     @client.create_gist(gist_params)
-  end
-
-  def url
-    @client.last_response.data[:html_url]
-  end
-
-  def success?
-    @client.last_response.status == STATUS_SUCCESS
+    Result.new(@client.last_response.data[:html_url], @client.last_response.status)
   end
 
   private
 
   def gist_params
     {
-      description: I18n.t('test_passages.gist.description', title: @test.title),
+      description: I18n.t('admin.gists.description', title: @test.title),
       files: {
         'test-guru-question.txt' => {
           content: gist_content
