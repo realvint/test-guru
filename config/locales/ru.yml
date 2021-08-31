@@ -82,8 +82,21 @@ ru:
       header: "Прохождение теста"
       question: "Вопрос"
       next: "Дальше"
+      gist: "Создать Gist"
+
+  gists:
+    success: "Gist успешно сохранён"
+    failure: "Во время сохранения gist произошла ошибка"
+    created_gist: "Созданный Gist"
 
   admin:
+    gists:
+      description: "Вопрос по тесту %{title} из TestGuru"
+      question: "Вопрос"
+      link: "Gist ссылка"
+      user: "Пользователь"
+      delete: "Удалить"
+      confirm: "Вы уверены?"
     shared:
       header:
         header: "Панель управления системой тестирования"

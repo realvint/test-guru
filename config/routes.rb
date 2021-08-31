@@ -6,7 +6,6 @@ Rails.application.routes.draw do
                      controllers: { sessions: 'sessions' }
 
   resources :tests, only: :index do
-
     member do
       post :start
     end
@@ -18,6 +17,7 @@ Rails.application.routes.draw do
         resources :answers, shallow: true, except: :index
       end
     end
+    resources :gists, only: %i[index destroy]
   end
 
   resources :test_passages, only: %i[show update] do
@@ -25,4 +25,6 @@ Rails.application.routes.draw do
       get :result
     end
   end
+
+  resources :gists, only: :create
 end

@@ -17,6 +17,9 @@
         </p>
       <% end %>
       <p>
+        <%= link_to t('.gist'), gists_path(:id => @test_passage.id), method: :post %>
+      </p>
+      <p>
         <%= form.submit t('.next'), class:'btn btn-sm btn-outline-secondary' %>
       </p>
     <% end %>

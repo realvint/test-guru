@@ -1,0 +1,6 @@
+<tr>
+  <td><%= link_to(truncate(gist.question.title, length: 25), admin_question_path(gist.question)) %></td>
+  <td><%= link_to("#{gist.id}", gist.url, rel: "nofollow", target: "_blank")%></td>
+  <td><%= gist.user.email %></td>
+  <td><%= link_to t('admin.gists.delete'), admin_gist_path(gist), method: :delete, data: { confirm: t('admin.gists.confirm') } %></td>
+</tr>
