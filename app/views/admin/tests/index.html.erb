@@ -1,21 +1,25 @@
-<h1><%= t('.header') %></h1>
-
-<p><%= link_to t('.create'), new_admin_test_path %></p>
-<table class="table table-striped">
-  <thead>
-    <tr>
-      <th class="sort-by-title pointer">
-        <%= t('.title') %>
-        <%= octicon 'arrow-up', class: 'text-success hide' %>
-        <%= octicon 'arrow-down', class: 'text-success hide' %>
-      </th>
-      <th><%=t('.level') %></th>
-      <th><%= t('.actions') %></th>
-      <th colspan="2"><%= t('.actions') %></th>
-    </tr>
-  </thead>
- <tbody>
-  <%= render @tests %>
- </tbody>
-</table>
-
+<div class="card">
+  <div class="card-header d-flex justify-content-between">
+    <h1><%= t('.header') %></h1>
+    <%= button_to t('.create'), new_admin_test_path, class: 'btn btn-sm btn-outline-primary mt-3' %>
+  </div>
+  <div class="card-body">
+    <table class="table">
+      <thead>
+        <tr>
+          <th class="sort-by-title pointer">
+            <%= t('.title') %>
+            <%= octicon 'arrow-up', class: 'text-success hide' %>
+            <%= octicon 'arrow-down', class: 'text-success hide' %>
+          </th>
+          <th><%=t('.level') %></th>
+          <th><%= t('.actions') %></th>
+          <th colspan="2"><%= t('.actions') %></th>
+        </tr>
+      </thead>
+     <tbody>
+      <%= render @tests %>
+     </tbody>
+    </table>
+  </div>
+</div>
