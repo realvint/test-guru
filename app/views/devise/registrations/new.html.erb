@@ -32,12 +32,15 @@
           </div>
 
           <div class="field">
-            <%= f.label :password_confirmation %><br />
+            <%= f.label :password_confirmation %>
+            <%= octicon "alert", class: 'text-danger hide'%>
+            <%= octicon "check", class: 'text-success hide'%><br/>
             <%= f.password_field :password_confirmation, autocomplete: "new-password", class: 'form-control' %>
+
           </div>
 
           <div class="actions">
-            <%= f.submit "Sign up", class: 'btn btn-outline-primary' %>
+            <%= f.submit class: 'btn btn-outline-primary' %>
           </div>
         <% end %>
 
