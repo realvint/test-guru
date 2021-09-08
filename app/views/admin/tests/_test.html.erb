@@ -8,7 +8,7 @@
   <td class="align-middle text-center"><%= test.level %></td>
   <td class="align-middle text-center"><%= test.questions.count %></td>
   <td class="align-middle">
-    <%= link_to(t('.edit'),
+    <%= link_to( t('.edit'),
                 edit_admin_test_path(test),
                 class: 'form-inline-link',
                 data: { test_id: test.id}) %>
