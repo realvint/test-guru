@@ -63,6 +63,7 @@ ru:
       start: "Начать"
     rescue:
       not_found: "Тест не найден"
+      no_questions: "В данном тесте не вопросов для проходения"
 
   questions:
     header:

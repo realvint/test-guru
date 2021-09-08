@@ -13,6 +13,8 @@ import "bootstrap/dist/css/bootstrap"
 import "stylesheets/application"
 import "./utilities/sorting"
 import "./utilities/password_confirming"
+import "./utilities/form_inline"
+import "./utilities/progress_bar"
 
 Rails.start()
 Turbolinks.start()

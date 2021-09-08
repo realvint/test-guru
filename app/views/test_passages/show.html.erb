@@ -1,6 +1,15 @@
 <div class="card">
   <div class="card-header">
     <h1><%= t('.header') %>: <%= @test_passage.test.title %></h1>
+    <div id="progress_bar">
+      <div class="progress">
+        <div class="progress-bar bg-success" role="progressbar"></div>
+      </div>
+      <%= content_tag :p, "0 %",
+                      class: "progress-bar-value",
+                      data: { current_question_id: @test_passage.current_question.id,
+                              questions_count: @test_passage.test.questions.count } %>
+    </div>
   </div>
   <div class="card-body">
     <p>
@@ -20,7 +29,7 @@
         <%= link_to t('.gist'), gists_path(:id => @test_passage.id), method: :post %>
       </p>
       <p>
-        <%= form.submit t('.next'), class:'btn btn-sm btn-outline-secondary' %>
+        <%= form.submit t('.next'), class:'btn btn-sm btn-outline-secondary', id: "next_question_btn" %>
       </p>
     <% end %>
   </div>

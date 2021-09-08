@@ -62,6 +62,7 @@ en:
       start: "Start"
     rescue:
       not_found: "Test not found"
+      no_questions: "No any questions in this Test. Try later"
 
   questions:
     header:
