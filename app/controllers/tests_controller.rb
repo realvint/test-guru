@@ -8,8 +8,12 @@ class TestsController < ApplicationController
 
   def start
     @test = Test.find params[:id]
-    current_user.tests.push(@test)
-    redirect_to current_user.test_passage(@test)
+    if @test.questions.any?
+      current_user.tests.push(@test)
+      redirect_to current_user.test_passage(@test)
+    else
+      redirect_to tests_path, alert: t('.rescue.no_questions')
+    end
   end
 
   private
