@@ -127,6 +127,8 @@ GEM
     nio4r (2.5.7)
     nokogiri (1.11.7-arm64-darwin)
       racc (~> 1.4)
+    nokogiri (1.11.7-x86_64-linux)
+      racc (~> 1.4)
     octicons (15.1.0)
     octicons_helper (15.1.0)
       actionview
@@ -244,6 +246,7 @@ GEM
 
 PLATFORMS
   arm64-darwin-20
+  x86_64-linux
 
 DEPENDENCIES
   bootsnap (>= 1.4.4)
