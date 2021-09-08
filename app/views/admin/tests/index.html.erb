@@ -4,6 +4,7 @@
     <%= button_to t('.create'), new_admin_test_path, class: 'btn btn-sm btn-outline-primary mt-3' %>
   </div>
   <div class="card-body">
+    <%= render 'shared/errors', resource: @test %>
     <table class="table">
       <thead>
         <tr>
@@ -12,8 +13,8 @@
             <%= octicon 'arrow-up', class: 'text-success hide' %>
             <%= octicon 'arrow-down', class: 'text-success hide' %>
           </th>
-          <th><%=t('.level') %></th>
-          <th><%= t('.actions') %></th>
+          <th class="text-center"><%=t('.level') %></th>
+          <th class="text-center"><%= t('.actions') %></th>
           <th colspan="2"><%= t('.actions') %></th>
         </tr>
       </thead>

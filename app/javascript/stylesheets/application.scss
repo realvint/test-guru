@@ -1,4 +1,24 @@
 @import "typography/icons";
 @import "global";
 
-body { background-color: #f8f9fa; }
+html {
+  margin: 0;
+}
+
+body {
+  background-color: #f8f9fa;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+footer {
+  margin-top: auto;
+  padding-bottom: 20px;
+}
+
+.form-inline .form-control {
+  display: inline-block;
+  width: auto;
+  vertical-align: middle;
+}

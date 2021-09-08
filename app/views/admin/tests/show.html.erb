@@ -1,6 +1,7 @@
 <h1><%= t('.title') %>: <%= @test.title %></h1>
 
 <p><%= link_to t('.main'), admin_tests_path %></p>
+<p><%= link_to(t('admin.tests.form.update'), edit_admin_test_path(@test)) %></p>
 
 <hr>
 
