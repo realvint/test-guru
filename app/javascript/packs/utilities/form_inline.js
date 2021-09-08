@@ -35,6 +35,6 @@ function formInlineHandler(testId) {
   } else {
     testTitle.classList.remove('hide')
     formInline.classList.add('hide')
-    link.textContent = 'Редакторовать'
+    link.textContent = 'Изменить'
   }
 }
