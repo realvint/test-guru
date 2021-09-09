@@ -73,6 +73,8 @@ en:
       question_for: "tests question:"
 
   test_passages:
+    send_result:
+      notice: "Result was sent"
     result:
       header: "The %{title} test was completed!"
       test: "Test"
@@ -80,6 +82,7 @@ en:
       success: "test successfully completed!"
       unsuccess: "test not successfully completed"
       back: "Main page"
+      send: "Send email with result "
     show:
       header: "Taking the test"
       question: "Question"

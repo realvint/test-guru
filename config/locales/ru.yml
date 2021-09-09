@@ -73,6 +73,8 @@ ru:
       question_for: "вопрос для теста:"
 
   test_passages:
+    send_result:
+      notice: "Результат отправлен"
     result:
       header: "Тест %{title} успешно завершён!"
       test: "Тест"
@@ -80,6 +82,7 @@ ru:
       success: "успешно пройден!"
       unsuccess: "тест пройден не успешно"
       back: "На главную"
+      send: "Отправить результат на почту"
     show:
       header: "Прохождение теста"
       question: "Вопрос"

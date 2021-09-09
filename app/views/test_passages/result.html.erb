@@ -11,6 +11,7 @@
       <h2 class="red"><%= @test_passage.passed_percents %>%</h2><br>
       <h2><%= t('.unsuccess') %>(</h2>
     <% end %>
+    <%= link_to t('.send'), send_result_test_passage_path(@test_passage), method: :post  %> |
     <%= link_to t('.back'), tests_path %>
   </div>
 </div>

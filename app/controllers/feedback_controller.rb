@@ -4,7 +4,7 @@ class FeedbackController < ApplicationController
   def index; end
 
   def create
-    FeedbackMailer.feedback(params).deliver_now
+    FeedbackMailer.feedback(params).deliver_later
     redirect_to feedback_index_path, notice: t('.notice')
   end
 end
