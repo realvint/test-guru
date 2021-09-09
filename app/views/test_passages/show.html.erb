@@ -7,13 +7,13 @@
       </div>
       <%= content_tag :p, "0 %",
                       class: "progress-bar-value",
-                      data: { current_question_id: @test_passage.current_question.id,
+                      data: { current_question_id: @test_passage.current_question_idx,
                               questions_count: @test_passage.test.questions.count } %>
     </div>
   </div>
   <div class="card-body">
     <p>
-      <%= t('.question') %> <%= @test_passage.current_question.id %> / <%= @test_passage.test.questions.count %>
+      <%= t('.question') %> <%= @test_passage.current_question_idx %> / <%= @test_passage.test.questions.count %>
     </p>
 
     <b><%= @test_passage.current_question.title %></b>
