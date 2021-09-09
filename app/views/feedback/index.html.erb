@@ -1,0 +1,24 @@
+
+<div class="card">
+  <div class="card-header">
+    <h2> <%= t('.header') %> </h2>
+  </div>
+  <div class="card-body">
+    <%= form_with url: feedback_index_path, html: { method: :post }, local: true do |form| %>
+      <div>
+        <p>
+          <%= form.label t('.title') %>
+          <%= form.text_field :title, class: 'form-control' %>
+        </p>
+        <p>
+          <%= form.label t('.body') %>
+          <%= form.text_area :body, size: "70x7", class: 'form-control' %>
+        </p>
+
+        <p>
+          <%= form.submit t('.send'), class: 'btn btn-primary' %>
+        </p>
+      </div>
+    <% end %>
+  </div>
+</div>

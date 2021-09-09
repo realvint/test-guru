@@ -35,6 +35,8 @@ en:
       project: "Project of school:"
       profession: "in the training of the profession Ruby on Rails developer"
       author: "Project author - Victor Malukhin"
+      feedback: "Send email"
+
     header:
       user: "User"
       tests: "Tests"
@@ -88,6 +90,14 @@ en:
     success: "Gist was successfully created!"
     failure: "An error occurred while saving gist"
     created_gist: "Created Gist"
+
+  feedback:
+    notice: "Your mail was send"
+    index:
+      send: "Send message"
+      header: "Feedback form"
+      title: "Title"
+      body: "Message"
 
   admin:
     gists:
