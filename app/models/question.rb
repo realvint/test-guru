@@ -3,7 +3,6 @@ class Question < ApplicationRecord
 
   has_many :answers, dependent: :destroy
   has_many :gists, dependent: :destroy
-  has_many :test_passages, dependent: :destroy
 
   validates :title, presence: true
 end
