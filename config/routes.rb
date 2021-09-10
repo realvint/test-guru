@@ -24,8 +24,10 @@ Rails.application.routes.draw do
   resources :test_passages, only: %i[show update] do
     member do
       get :result
+      post :send_result
     end
   end
 
   resources :gists, only: :create
+  resources :feedback, only: %i[index create]
 end

@@ -2,18 +2,18 @@
   <div class="col col-md-4">
     <div class="card">
       <div class="card-header">
-        <h2>Войти в систему</h2>
+        <h2><%= t('.header') %> </h2>
       </div>
       <div class="card-body">
         <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
           <div class="form-group">
             <p>
-              <%= f.label :email %><br />
+              <%= f.label t('.email'), class: 'mb-2' %><br />
               <%= f.email_field :email, autofocus: true, autocomplete: "email", class: 'form-control' %>
             </p>
 
             <p>
-              <%= f.label :password %><br />
+              <%= f.label t('.password'), class: 'mb-2' %><br />
               <%= f.password_field :password, autocomplete: "current-password", class: 'form-control' %>
             </p>
 
@@ -21,13 +21,13 @@
               <div class="form-check">
                 <%= f.label :remember_me, class: 'form-check-label' do %>
                   <%= f.check_box :remember_me, class: 'form-check-input' %>
-                  Remember me
+                  <%= t('.remember_me') %>
                 <% end %>
               </div>
             <% end %>
 
             <p>
-              <%= f.submit "Log in", class: 'btn btn-outline-primary' %>
+              <%= f.submit t('.log_in'), class: 'btn btn-outline-primary mt-2' %>
           </div>
         <% end %>
 

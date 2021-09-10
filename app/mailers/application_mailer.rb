@@ -1,4 +1,4 @@
 class ApplicationMailer < ActionMailer::Base
-  default from: %("Система тестирования - TestGuru" <info@rem69.ru>)
+  default from: 'rem69.ru@yandex.ru'
   layout 'mailer'
 end

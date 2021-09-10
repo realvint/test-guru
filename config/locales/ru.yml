@@ -36,6 +36,7 @@ ru:
       project: "Учебный проект школы"
       profession: "в рамках обучения профессии Ruby on Rails developer"
       author: "Автор проекта - Малухин Виктор"
+      feedback: "Обратная связь"
     header:
       user: "Пользователь"
       tests: "Тесты"
@@ -72,6 +73,8 @@ ru:
       question_for: "вопрос для теста:"
 
   test_passages:
+    send_result:
+      notice: "Результат отправлен"
     result:
       header: "Тест %{title} успешно завершён!"
       test: "Тест"
@@ -79,6 +82,7 @@ ru:
       success: "успешно пройден!"
       unsuccess: "тест пройден не успешно"
       back: "На главную"
+      send: "Отправить результат на почту"
     show:
       header: "Прохождение теста"
       question: "Вопрос"
@@ -89,6 +93,14 @@ ru:
     success: "Gist успешно сохранён"
     failure: "Во время сохранения gist произошла ошибка"
     created_gist: "Созданный Gist"
+
+  feedback:
+    notice: "Ваше письмо отправлено"
+    index:
+      send: "Отправить"
+      header: "Отправить сообщение"
+      title: "Заголовок"
+      body: "Сообщение"
 
   admin:
     gists:
