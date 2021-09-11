@@ -1,0 +1,14 @@
+<tr>
+  <td>
+    <%= link_to admin_badge_path(badge) do %>
+      <%= badge.title %>
+    <% end %>
+  </td>
+  <td><%= badge.description %></td>
+  <td><%= link_to 'Edit', edit_admin_badge_path(badge) %></td>
+  <td><%= link_to 'Delete',
+                  admin_badge_path(badge),
+                  method: :delete,
+                  data: { confirm: 'Are you sure?' } %>
+  </td>
+</tr>
