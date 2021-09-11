@@ -9,6 +9,7 @@
       <span class="navbar-text p-2 <%= "active" if I18n.locale == :en %>">
         <%= link_to 'English ', { lang: :en } %>
       </span>
+      <%= link_to 'Badges', badges_path, class: "p-2" %>
       <% if current_user.admin? %>
         <%= link_to t('.admin'), admin_tests_path %>
       <% end %>
