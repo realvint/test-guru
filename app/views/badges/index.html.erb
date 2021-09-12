@@ -1,4 +1,4 @@
-<h1>Badges</h1>
+<h1>All Badges</h1>
 
 <table class="table">
   <tr>
@@ -7,6 +7,17 @@
     <th>Description</th>
   </tr>
   <%= render @badges %>
+</table>
+
+<h1>Your badges</h1>
+
+<table class="table">
+  <tr>
+    <th>Img</th>
+    <th>Title</th>
+    <th>Description</th>
+  </tr>
+  <%= render @user_badges %>
 </table>
 
 <%= link_to 'back', tests_path %>
