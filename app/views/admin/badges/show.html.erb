@@ -1,14 +1,14 @@
-<h2>Badge page</h2>
+<h2><%= t('.header') %></h2>
 
-<p>Title: <%= @badge.title %></p>
-<p>Description: <%= @badge.description %></p>
-<p>Image: <%= @badge.img_link %></p>
-<p>Type: <%= @badge.rule_type %></p>
-<p>Option: <%= @badge.rule_option%></p>
+<p><%= t('.title') %>: <%= @badge.title %></p>
+<p><%= t('.description') %>: <%= @badge.description %></p>
+<p><%= t('.image') %>: <%= @badge.img_link %></p>
+<p><%= t('.type') %>: <%= @badge.rule_type %></p>
+<p><%= t('.option') %>: <%= @badge.rule_option%></p>
 
-<%= link_to 'Back', admin_badges_path %> |
-<%= link_to 'Edit', edit_admin_badge_path(@badge) %> |
-<%= link_to 'Delete',
+<%= link_to t('.back'), admin_badges_path %> |
+<%= link_to t('.edit'), edit_admin_badge_path(@badge) %> |
+<%= link_to t('.delete'),
             admin_badge_path(@badge),
             method: :delete,
-            data: { confirm: 'Are you sure?' } %>
+            data: { confirm: t('.confirm') } %>
