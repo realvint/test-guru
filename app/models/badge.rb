@@ -1,6 +1,6 @@
 class Badge < ApplicationRecord
 
-  RULE_TYPES = %i[by_category by_level first_time_try].freeze
+  enum rule_type: %i[by_category by_level first_time_try]
 
   validates :title, presence: true
 

@@ -1,4 +1,12 @@
 en:
+  activerecord:
+    attributes:
+      badge:
+        rule_type:
+          by_category: "By Category"
+          by_level: "By Level"
+          first_time_try: "First time try"
+
   helpers:
     submit:
       test:
@@ -26,10 +34,10 @@ en:
         correct: "Correct"
       badge:
         title: "Заголовок"
-        description: ""
-        img_link: ""
-        rule_type: ""
-        rule_option: ""
+        description: "Description"
+        img_link: "Img"
+        rule_type: "Rule type"
+        rule_option: "Option"
 
     select:
       prompt: "Please select"

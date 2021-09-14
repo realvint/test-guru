@@ -1,4 +1,12 @@
 ru:
+  activerecord:
+    attributes:
+      badge:
+        rule_type:
+          by_category: "По категории"
+          by_level: "По уровню"
+          first_time_try: "С первой попытки"
+
   helpers:
     submit:
       test:
