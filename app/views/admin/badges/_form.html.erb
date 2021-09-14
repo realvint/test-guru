@@ -18,7 +18,7 @@
 
   <p>
     <%= form.label :rule_type %>
-    <%= form.text_field :rule_type, class: 'form-control' %>
+    <%= form.select :rule_type, Badge::RULE_TYPES, {}, class: 'form-select' %>
   </p>
 
   <p>
