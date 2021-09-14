@@ -1,0 +1,11 @@
+<tr>
+  <td>
+    <% if badge.img_link %>
+      <%= image_tag badge.img_link, size: '25x25' %>
+    <% else %>
+      <%= t('.no_photo') %>
+    <% end %>
+  </td>
+  <td><%= badge.title %></td>
+  <td><%= badge.description %></td>
+</tr>

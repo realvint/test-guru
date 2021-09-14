@@ -1,15 +1,26 @@
 en:
+  activerecord:
+    attributes:
+      badge:
+        rule_type:
+          by_category: "By Category"
+          by_level: "By Level"
+          first_time_try: "First time try"
+
   helpers:
     submit:
       test:
         create: "Create test"
         update: "Update test"
-    question:
-      create: "Create question"
-      update: "Update question"
-    answer:
-      create: "Create answer"
-      update: "Update answer"
+      question:
+        create: "Create question"
+        update: "Update question"
+      answer:
+        create: "Create answer"
+        update: "Update answer"
+      badge:
+        create: "Create badge"
+        update: "Update badge"
 
     label:
       test:
@@ -21,6 +32,12 @@ en:
       answer:
         title: "Answer"
         correct: "Correct"
+      badge:
+        title: "Заголовок"
+        description: "Description"
+        img_link: "Img"
+        rule_type: "Rule type"
+        rule_option: "Option"
 
     select:
       prompt: "Please select"
@@ -46,6 +63,7 @@ en:
       confirm: "You want to exit?"
       main: "Tests application - TestGuru"
       admin: "AdminPanel"
+      badges: "Badges"
 
   layouts:
     admin:
@@ -102,6 +120,17 @@ en:
       title: "Title"
       body: "Message"
 
+  badges:
+    index:
+      all: "All Badges"
+      users: "Your Badges"
+      back: "Back"
+      img: "Img"
+      title: "Title"
+      description: "Description"
+    badge:
+      no_photo: "No photo"
+
   admin:
     gists:
       description: "A question about %{title} from TestGuru"
@@ -119,6 +148,7 @@ en:
         login: "Login"
         signup: "Signup"
         confirm: "You want to exit?"
+        badges: "Badges"
     base:
       admin_required:
         forbidden: "Access is denied."
@@ -207,9 +237,45 @@ en:
         delete: "Delete"
         confirm: "Delete question?"
 
-    sessions:
+    badges:
       create:
-        welcome: "Welcome"
+        success: "Badge was created"
+      update:
+        success: "Badge was updated"
+      destroy:
+        success: "Badge was deleted"
+      badge:
+        edit: "Edit"
+        delete: "Delete"
+        confirm: "Are you sure?"
+      new:
+        create_new: "New badge"
+        back: "Back"
+      edit:
+        edit_header: "Change badge"
+        back: "Back"
+      show:
+        edit: "Edit"
+        back: "Back"
+        delete: "Delete"
+        header: "Badge page"
+        title: "Title"
+        description: "Description"
+        image: "Image"
+        type: "Rule type"
+        option: "Rule option"
+        confirm: "Are you sure?"
+      index:
+        header: "Badges"
+        create: "create new badge"
+        back: "Back"
+        title: "Title"
+        description: "Description"
+        actions: "Actions"
+
+  sessions:
+    create:
+      welcome: "Welcome"
 
   tests_mailer:
     completed_test:

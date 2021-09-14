@@ -1,0 +1,23 @@
+<h1><%= t('.all') %></h1>
+
+<table class="table">
+  <tr>
+    <th><%= t('.img') %></th>
+    <th><%= t('.title') %></th>
+    <th><%= t('.description') %></th>
+  </tr>
+  <%= render @badges %>
+</table>
+
+<h1><%= t('.users') %></h1>
+
+<table class="table">
+  <tr>
+    <th><%= t('.img') %></th>
+    <th><%= t('.title') %></th>
+    <th><%= t('.description') %></th>
+  </tr>
+  <%= render @user_badges %>
+</table>
+
+<%= link_to t('.back'), tests_path %>

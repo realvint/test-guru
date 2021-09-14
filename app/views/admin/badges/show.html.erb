@@ -1,0 +1,14 @@
+<h2><%= t('.header') %></h2>
+
+<p><%= t('.title') %>: <%= @badge.title %></p>
+<p><%= t('.description') %>: <%= @badge.description %></p>
+<p><%= t('.image') %>: <%= @badge.img_link %></p>
+<p><%= t('.type') %>: <%= @badge.rule_type %></p>
+<p><%= t('.option') %>: <%= @badge.rule_option%></p>
+
+<%= link_to t('.back'), admin_badges_path %> |
+<%= link_to t('.edit'), edit_admin_badge_path(@badge) %> |
+<%= link_to t('.delete'),
+            admin_badge_path(@badge),
+            method: :delete,
+            data: { confirm: t('.confirm') } %>

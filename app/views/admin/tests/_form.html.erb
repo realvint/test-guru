@@ -3,23 +3,23 @@
 <%= render 'shared/errors', resource: @test %>
 
 <%= form_with model: [:admin, @test], local: true do |f|%>
-<p>
-  <%= f.label :title %>
-  <%=  f.text_field :title, class: 'form-control' %>
-</p>
+  <p>
+    <%= f.label :title %>
+    <%=  f.text_field :title, class: 'form-control' %>
+  </p>
 
-<p>
-  <%= f.label :level %>
-  <%= f.number_field :level, class: 'form-control' %>
-</p>
+  <p>
+    <%= f.label :level %>
+    <%= f.number_field :level, class: 'form-control' %>
+  </p>
 
-<p>
-  <%= f.label :category_id %>:
-  <%= f.collection_select :category_id, Category.all, :id, :title, prompt: true, class: 'form-select' %>
-</p>
+  <p>
+    <%= f.label :category_id %>:
+    <%= f.collection_select :category_id, Category.all, :id, :title, {}, class: 'form-select' %>
+  </p>
 
-<p>
-  <%= f.submit class: 'btn btn-outline-primary mb-2' %>
-</p>
+  <p>
+    <%= f.submit class: 'btn btn-outline-primary mb-2' %>
+  </p>
 
 <% end %>

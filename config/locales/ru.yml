@@ -1,4 +1,12 @@
 ru:
+  activerecord:
+    attributes:
+      badge:
+        rule_type:
+          by_category: "По категории"
+          by_level: "По уровню"
+          first_time_try: "С первой попытки"
+
   helpers:
     submit:
       test:
@@ -10,6 +18,9 @@ ru:
       answer:
         create: "Создать ответ"
         update: "Обновить ответ"
+      badge:
+        create: "Создать награду"
+        update: "Обновить награду"
 
     label:
       test:
@@ -21,6 +32,13 @@ ru:
       answer:
         title: "Ответ"
         correct: "Верный"
+      badge:
+        title: "Заголовок"
+        description: "Описание"
+        img_link: "Ссылка на картинку"
+        rule_type: "Правило выдачи награды"
+        rule_option: "Дополнительные параметры"
+
     select:
       prompt: "Выберите:"
 
@@ -46,6 +64,7 @@ ru:
       confirm: "Вы хотите выйти из системы?"
       main: "Система тестов - TestGuru"
       admin: "Админпанель"
+      badges: "Награды"
 
   layouts:
     admin:
@@ -102,6 +121,18 @@ ru:
       title: "Заголовок"
       body: "Сообщение"
 
+  badges:
+    index:
+      all: "Все награды"
+      users: "Ваши награды"
+      back: "Назад"
+      img: "Картинка"
+      title: "Название"
+      description: "Описание"
+    badge:
+      no_photo: "Нет фото"
+
+
   admin:
     gists:
       description: "Вопрос по тесту %{title} из TestGuru"
@@ -119,6 +150,7 @@ ru:
         login: "Войти"
         signup: "Регистрация"
         confirm: "Вы хотите выйти из системы?"
+        badges: "Награды"
     base:
       admin_required:
         forbidden: "Нет доступа."
@@ -207,9 +239,47 @@ ru:
         delete: "Удалить"
         confirm: "Удалить вопрос?"
 
+    badges:
+      create:
+        success: "Награда создана"
+      update:
+        success: "Награда обновлена"
+      destroy:
+        success: "Награда удалена"
+      badge:
+        edit: "Редактировать"
+        delete: "Удалить"
+        confirm: "Вы уверены?"
+      new:
+        create_new: "Создать награду"
+        back: "Назад"
+      edit:
+        edit_header: "Изменить награду"
+        back: "Назад"
+      show:
+        edit: "Редактировать"
+        back: "Назад"
+        delete: "Удалить"
+        header: "Страница награды"
+        title: "Название"
+        description: "Описание"
+        image: "Картинка"
+        type: "Тип награды"
+        option: "Параметр"
+        confirm: "Вы уверены?"
+      index:
+        header: "Награды"
+        create: "создать награду"
+        back: "Назад"
+        title: "Заголовок"
+        description: "Описание"
+        actions: "Действия"
+
   sessions:
     create:
       welcome: "Привет"
+
+
 
   tests_mailer:
     completed_test:
