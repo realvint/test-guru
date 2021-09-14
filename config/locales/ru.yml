@@ -108,6 +108,8 @@ ru:
       question: "Вопрос"
       next: "Дальше"
       gist: "Создать Gist"
+    update:
+      time_over: "Время вышло"
 
   gists:
     success: "Gist успешно сохранён"

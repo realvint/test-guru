@@ -6,6 +6,7 @@ class TestPassagesController < ApplicationController
 
   def update
     @test_passage.accept!(params[:answer_ids])
+    flash.alert = t('.time_over') if @test_passage.time_over?
 
     if @test_passage.completed?
       AddBadgesService.new(@test_passage).check if @test_passage.success?

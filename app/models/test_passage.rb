@@ -9,7 +9,7 @@ class TestPassage < ApplicationRecord
   SUCCESS_RATIO = 85
 
   def completed?
-    current_question.nil?
+    time_over? || current_question.nil?
   end
 
   def success?
@@ -17,6 +17,10 @@ class TestPassage < ApplicationRecord
   end
 
   def accept!(answer_ids)
+    if time_over?
+      self.current_question = nil
+      return
+    end
     self.correct_questions += 1 if correct_answer?(answer_ids)
 
     self.current_question = next_question
@@ -29,6 +33,14 @@ class TestPassage < ApplicationRecord
 
   def current_question_idx
     test.questions.order(:id).index(current_question) + 1
+  end
+
+  def remaining_time
+    (test.timer - (Time.current - created_at).seconds).to_i
+  end
+
+  def time_over?
+    remaining_time <= 0
   end
 
   private

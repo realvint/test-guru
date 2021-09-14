@@ -107,6 +107,8 @@ en:
       question: "Question"
       next: "Next"
       gist: "Gist question"
+    update:
+      time_over: "Time Over"
 
   gists:
     success: "Gist was successfully created!"
