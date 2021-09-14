@@ -27,6 +27,7 @@ ru:
         title: "Название"
         level: "Уровень"
         category_id: "Категория"
+        timer: "Время для прохождения (сек)"
       question:
         question: "Вопрос"
       answer:
@@ -174,6 +175,7 @@ ru:
         questions: "Кол-во вопросов"
         actions: "Действия"
         create: "Создать новый тест"
+        timer: "Время для прохождения (сек)"
       edit:
         header: "Редактирование теста: %{title}"
         back: "Назад"

@@ -27,6 +27,7 @@ en:
         title: "Title"
         level: "Level"
         category_id: "Category"
+        timer: "Passage time (sec)"
       question:
         question: "Question"
       answer:
@@ -172,6 +173,7 @@ en:
         questions: "Questions count"
         actions: "Actions"
         create: "Create new test"
+        timer: "Passage time (sec)"
       edit:
         header: "Editing the test: %{title}"
         back: "Back"
