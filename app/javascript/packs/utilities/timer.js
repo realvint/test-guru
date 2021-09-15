@@ -1,5 +1,5 @@
 document.addEventListener('turbolinks:load', function(){
-  let timerElement = document.querySelector('.timer')
+  const timerElement = document.querySelector('.timer')
 
   if (!timerElement) return null
 
