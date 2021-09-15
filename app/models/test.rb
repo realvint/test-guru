@@ -22,4 +22,8 @@ class Test < ApplicationRecord
       .order(title: :desc)
       .pluck(:title)
   end
+
+  def timer?
+    timer.positive?
+  end
 end

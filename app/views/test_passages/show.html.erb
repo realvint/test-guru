@@ -1,6 +1,17 @@
 <div class="card">
   <div class="card-header">
-    <h1><%= t('.header') %>: <%= @test_passage.test.title %></h1>
+    <div class="d-flex justify-content-between">
+      <h1><%= t('.header') %>: <%= @test_passage.test.title %></h1>
+      <h1 class="text-success">
+        <% if @test_passage.test.timer? %>
+          <%= content_tag :div,
+                          class: 'timer',
+                          data: { remaining_time: @test_passage.remaining_time } do %>
+            <%= content_tag :span, nil, class: 'timer_label' %>
+          <% end %>
+        <% end %>
+      </h1>
+    </div>
     <div id="progress_bar">
       <div class="progress">
         <div class="progress-bar bg-success" role="progressbar"></div>
