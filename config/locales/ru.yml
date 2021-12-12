@@ -96,7 +96,7 @@ ru:
     send_result:
       notice: "Результат отправлен"
     result:
-      header: "Тест %{title} успешно завершён!"
+      header: "Тест: %{title} завершён!"
       test: "Тест"
       scope: "Ваш счёт"
       success: "успешно пройден!"
